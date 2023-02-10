@@ -1,7 +1,4 @@
 # patrones-de-diseno-ejemplificados
-Repositorio dedicado a la aplicación de patrones de diseño ajenos a los vistos en clase. Con el fin de entender y argumentar su uso.
-El problema de ejemplo consiste en implementar un patrón de diseño de visitor en Java para mostrar información sobre las exposiciones de un museo.
-
-El museo tiene tres tipos de exposiciones: pinturas, esculturas y pantallas interactivas. El patrón de diseño de visitantes permite separar la visualización de la información sobre estas exposiciones de su implementación real.
-
-Esto significa que si hay que cambiar la información sobre cada exposición, sólo hay que modificar la clase visitante, no las clases de cada tipo de exposición. 
+Contexto: un museo está desarrollando su propio sistema que le permita mostrar la información acerca de tres las exposiciones que posee, pinturas, esculturas y pantallas interactivas, el problema surge a la hora de integrar este sistema con las clases ya existentes, debido a que ya han sido creadas y de estás dependen los sistemas de inventario del museo, por lo cual modificar estas clases puede ser riesgoso debido a la alta probabilidad de obtener resultados poco deseados en el sistema de inventario.
+#Solucion
+por lo cual se decide hacer una integracion por medio de una clase visitor, incorporando un nuevo comportamiento, pasando el objeto como un argumento de un metodo y ahora si extraemos una interfaz en común para todo los visitantes, todos los nodos pueden trabajar con cualquier visitante que se le inserte a nuestra app
